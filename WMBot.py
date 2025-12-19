@@ -22,7 +22,7 @@ VK_TOKEN = os.environ['VK_TOKEN']
 VK_GROUP_ID = 234714085  
 
 # Telegram
-TELEGRAM_TOKEN = "8436440101:AAGkhlQL5JCh2AEuKfwomH6o2RGavkojaC4"
+TELEGRAM_TOKEN = os.environ['TELEGRAM_TOKEN']
 CHANNEL_ID = -1003291448082
 
 bot = telegram.Bot(token=TELEGRAM_TOKEN)
@@ -71,17 +71,7 @@ def download_image(url, filename="image.jpg", retries=3):
             time.sleep(2)
     return None
 
-def send_to_vk(image_path, caption=None):
-    try:
-        vk_session = vk_api.VkApi(token=VK_TOKEN)
-        upload = VkUpload(vk_session)
-        photo = upload.photo_wall(photos=image_path)[0]
-        attachment = f"photo{photo['owner_id']}_{photo['id']}"
-        vk = vk_session.get_api()
-        vk.wall.post(owner_id=-VK_GROUP_ID, attachments=attachment, message=caption or "")
-        print("Posted to VK:", image_path)
-    except Exception as e:
-        print("VK post error:", e)
+
 
 def send_to_telegram(img_url, caption):
     try:
