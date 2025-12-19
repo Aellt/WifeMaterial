@@ -1,0 +1,34 @@
+name: WMBot
+
+on:
+  schedule:
+    # Запускать каждый час в минуту 0. Используйте crontab.guru для настройки.
+    - cron: '0 * * * *'
+  # Позволяет запустить скрипт вручную из вкладки Actions
+  workflow_dispatch:
+
+jobs:
+  post-image:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Получение кода из репозитория
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Настройка Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11' # Укажите вашу версию Python
+
+      # 3. Установка зависимостей
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 4. Запуск бота
+      - name: Run the poster bot
+        env: # Передача секретов в виде переменных окружения
+          VK_TOKEN: ${{ secrets.VK_TOKEN }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+        run: python WMBot.py  # Замените на имя вашего файла
