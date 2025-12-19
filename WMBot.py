@@ -23,7 +23,7 @@ VK_GROUP_ID = 234714085
 
 # Telegram
 TELEGRAM_TOKEN = os.environ['TELEGRAM_TOKEN']
-CHANNEL_ID = os.environ['CHANNEL_ID']
+CHANNEL_ID = -1003291448082
 
 bot = telegram.Bot(token=TELEGRAM_TOKEN)
 
