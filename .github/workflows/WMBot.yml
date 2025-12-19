@@ -3,7 +3,7 @@ name: WMBot
 on:
   schedule:
     # Запускать каждый час в минуту 0. Используйте crontab.guru для настройки.
-    - cron: '*/10 * * * *'
+    - cron: '*/30 * * * *'
   # Позволяет запустить скрипт вручную из вкладки Actions
   workflow_dispatch:
 
