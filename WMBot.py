@@ -85,10 +85,29 @@ def send_to_vk(image_path, caption=None):
 
 def send_to_telegram(img_url, caption):
     try:
-        bot.send_photo(chat_id=CHANNEL_ID, photo=img_url, caption=caption[:1024])
-        print("Sent to Telegram:", img_url)
+        # Логируем попытку отправки
+        print(f"[Telegram] Пытаюсь отправить: {img_url}")
+        
+        # Отправка фото
+        message = bot.send_photo(
+            chat_id=CHANNEL_ID, 
+            photo=img_url, 
+            caption=caption[:1024], # Обрезка до лимита Telegram
+            timeout=30  # Увеличиваем таймаут
+        )
+        
+        # Если дошли сюда, отправка успешна
+        print(f"[Telegram] Успешно отправлено! ID сообщения: {message.message_id}")
+        return True
+        
+    except telegram.error.TelegramError as e:
+        # Ловим специфичные ошибки Telegram API
+        print(f"[Telegram] Критическая ошибка: {e}")
+        return False
     except Exception as e:
-        print("Telegram send error:", e)
+        # Любые другие ошибки
+        print(f"[Telegram] Неизвестная ошибка: {e}")
+        return False
 
 # ==========================
 # Основной код
