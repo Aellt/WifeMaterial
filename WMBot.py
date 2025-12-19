@@ -19,7 +19,7 @@ DANBOORU_TAGS = ["Arknights+rating:s","Zenless_Zone_Zero+rating:s","Genshin_Impa
 
 # VK
 VK_TOKEN = os.environ['VK_TOKEN']
-VK_GROUP_ID = os.environ['VK_GROUP_ID']  
+VK_GROUP_ID = 234714085  
 
 # Telegram
 TELEGRAM_TOKEN = os.environ['TELEGRAM_TOKEN']
