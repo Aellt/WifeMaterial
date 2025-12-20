@@ -12,7 +12,7 @@ import os
 DANBOORU_TAGS = ["Arknights+rating:s","Zenless_Zone_Zero+rating:s","Genshin_Impact+rating:s",
                  "goddess_of_victory:_nikke+rating:s","wuthering_waves+rating:s",
                  "honkai:_star_rail+rating:s","hololive+rating:s","azur_lane+rating:s",
-                 "umamusume+rating:s","touhou+rating:s","fate+rating:s""pokemon+rating:s",
+                 "umamusume+rating:s","touhou+rating:s","fate+rating:s","pokemon+rating:s",
                  "original+rating:s","vocaloid+rating:s","sports_bra+rating:s","girls'_frontline+rating:s",
                  "idolmaster+rating:s","bleach+rating:s","honkai_(series)+rating:s","chainsaw_man+rating:s",
                  "sono_bisque_doll_wa_koi_wo_suru+rating:s","bocchi_the_rock!+rating:s"]
