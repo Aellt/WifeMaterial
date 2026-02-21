@@ -9,13 +9,13 @@ import os
 # ==========================
 # Настройки
 # ==========================
-DANBOORU_TAGS = ["Arknights+rating:s","Zenless_Zone_Zero+rating:s","Genshin_Impact+rating:s",
-                 "goddess_of_victory:_nikke+rating:s","wuthering_waves+rating:s",
-                 "honkai:_star_rail+rating:s","hololive+rating:s","azur_lane+rating:s",
-                 "umamusume+rating:s","touhou+rating:s","fate+rating:s","pokemon+rating:s",
-                 "original+rating:s","vocaloid+rating:s","sports_bra+rating:s","girls'_frontline+rating:s",
-                 "idolmaster+rating:s","bleach+rating:s","honkai_(series)+rating:s","chainsaw_man+rating:s",
-                 "sono_bisque_doll_wa_koi_wo_suru+rating:s","bocchi_the_rock!+rating:s"]
+DANBOORU_TAGS = ["Arknights+rating:q","Zenless_Zone_Zero+rating:q","Genshin_Impact+rating:q",
+                 "goddess_of_victory:_nikke+rating:q","wuthering_waves+rating:q",
+                 "honkai:_star_rail+rating:q","hololive+rating:q","azur_lane+rating:q",
+                 "umamusume+rating:q","touhou+rating:q","fate+rating:q","pokemon+rating:q",
+                 "original+rating:q","vocaloid+rating:q","sports_bra+rating:q","girls'_frontline+rating:q",
+                 "idolmaster+rating:q","bleach+rating:q","honkai_(series)+rating:q","chainsaw_man+rating:q",
+                 "sono_bisque_doll_wa_koi_wo_suru+rating:q","bocchi_the_rock!+rating:q"]
 
 # VK
 VK_TOKEN = os.environ['VK_TOKEN']
