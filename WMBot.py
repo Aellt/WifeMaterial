@@ -33,7 +33,10 @@ bot = telegram.Bot(token=TELEGRAM_TOKEN)
 
 def get_random_post(tags):
     try:
-        r = requests.get(f"https://shima.donmai.us/posts.json?tags={random.choice(tags)}&limit=150")
+        headers = {
+          'User-Agent': 'MyWMBot/1.0 (GitHub Actions)'
+        }
+        r = requests.get(f"https://danbooru.donmai.us/posts.json?tags={random.choice(tags)}&limit=150")
         r.raise_for_status()
         posts = r.json()
         if not posts:
