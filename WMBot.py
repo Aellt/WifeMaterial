@@ -33,7 +33,7 @@ bot = telegram.Bot(token=TELEGRAM_TOKEN)
 
 def get_random_post(tags):
     try:
-        r = requests.get(f"https://kagamihara.donmai.us/posts.json?tags={random.choice(tags)}&limit=150")
+        r = requests.get(f"https://danbooru.donmai.us/posts.json?tags={random.choice(tags)}&limit=150")
         r.raise_for_status()
         posts = r.json()
         if not posts:
