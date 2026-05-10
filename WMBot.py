@@ -7,7 +7,7 @@ import time
 import os
 
 # ==========================
-# Настройки
+# Настройкu
 # ==========================
 DANBOORU_TAGS = ["Arknights+rating:q","Zenless_Zone_Zero+rating:q","Genshin_Impact+rating:q",
                  "goddess_of_victory:_nikke+rating:q","wuthering_waves+rating:q",
